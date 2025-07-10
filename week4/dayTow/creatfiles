@@ -1,0 +1,16 @@
+#!/bin/bash
+
+for i in {1..6}
+do
+  filename="exercise$i.js"
+  
+  if [ -e "$filename" ]; then
+    echo "$filename already exists"
+  else
+    touch "$filename"
+    echo "$filename created"
+  fi
+done
+
+echo "Done"
+
