@@ -1,0 +1,15 @@
+#!/bin/bash
+
+read -p "🔢 How many files do you want to create? " count
+read -p "📄 What file extension? (e.g. js, py): " ext
+
+for ((i = 1; i <= count; i++)); do
+    filename="exercise$i.$ext"
+
+    if [ -e "$filename" ]; then
+        echo "⚠️  Skipped: $filename already exists."
+    else
+        touch "$filename"
+        echo "✅ Created: $filename"
+    fi
+done
