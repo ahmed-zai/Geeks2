@@ -11,7 +11,7 @@ Instructions
 
 */
 
-const Exercise1 = ({ispress}) => {
+const Exercise1 = () => {
     const myelement = <h1>I Love JSX!</h1>;
     const sum = 5 + 5;
 
